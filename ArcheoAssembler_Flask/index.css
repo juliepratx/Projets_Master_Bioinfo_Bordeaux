@@ -1,0 +1,405 @@
+/*
+ArcheoAssembler. Project
+M1 BioInformatique
+Projet de programmation
+Référente/Cliente : Ostertag Cécilia
+*/
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0%;
+    text-align: right;
+    margin-top: 0;
+}
+
+#restart {
+    border: none;
+    background-color: transparent;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+#tutorials {
+    border: none;
+    background-color: transparent;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+#contacts {
+    border: none;
+    background-color: transparent;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+label {
+    font-size: small;
+}
+
+
+/* ------------------------------------------------ FOOTER ---------------------------------------------------*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding-left: 2%;
+    font-size: 12px;
+}
+
+
+/* ------------------------------------------------ HEADER ---------------------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 90%;
+    padding: 0;
+    margin-left: 5%;
+    border-bottom: 1px solid black;
+}
+
+
+/* ArcheoAssembler. */
+
+h1 {
+    padding-top: 0%;
+    margin-left: 0.5%;
+    margin-bottom: 0.75%;
+    text-align: left;
+    margin-top: 10px;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+span {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+}
+
+#menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0%;
+    text-align: right;
+    margin-top: 0;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: -1px;
+    word-spacing: 70px;
+}
+
+
+/* ------------------------------------------------ BLOCKS---------------------------------------------------*/
+
+.block {
+    background-color: lightgrey;
+    padding: 0;
+    border-style: groove;
+    border-color: black;
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+
+/* Main block */
+
+#mainBlock {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 18%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 75%;
+}
+
+
+/* Filters sub-block */
+
+#FiltersBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+}
+
+#insideFiltersBlock {
+    background-color: honeydew;
+    /*à retirer*/
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    height: 55%;
+    left: 8%;
+}
+
+#insideFiltersBlock * {
+    display: inline;
+}
+
+#insideFiltersBlock button {
+    /*boutons crees par getFilter()*/
+    border-radius: 100%;
+    margin-right: 1em;
+}
+
+#insideFiltersBlock button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#chooseFilter {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    width: 80%;
+}
+
+#tableSize {
+    position: absolute;
+    margin: 0;
+    font-size: 1rem;
+    right: 1%;
+    bottom: 1%
+}
+
+
+/* Table sub-block */
+
+#DataBlock {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    overflow: auto;
+}
+
+#loading {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    text-align: center;
+    background-color: lightslategray;
+    visibility: hidden;
+}
+
+
+/* Pictures sub-block */
+
+#PicsBlock {
+    background-color: aliceblue;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+}
+
+
+/* Selection sub-block */
+
+#selectionBlock {
+    position: fixed;
+    margin: 0;
+    top: 18%;
+    right: -406px;
+    width: 400px;
+    height: 75%;
+}
+
+#insideSelectionBlock {
+    position: absolute;
+    bottom: 40px;
+    top: 15%;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.selectionBoxes {
+    margin: 0 auto;
+    float: left;
+    background-color: blue;
+    width: 185px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.delButton {
+    border-radius: 100%;
+    margin-right: 1em;
+}
+
+.delButton:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#patchButton {
+    position: absolute;
+    left: 90px;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+}
+
+#assemblyButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 40px;
+}
+
+
+/* ------------------------------------------------ BUTTONS ---------------------------------------------------*/
+
+#resetButton {
+    position: absolute;
+    right: 0;
+    margin: 0.5%;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#show_hideFiltersButton {
+    position: absolute;
+    right: 0;
+    top: -5%;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#switchButton {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.files {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#show_hideSelectionButton {
+    background-color: lightgray;
+    position: relative;
+    top: 0px;
+    left: -10%;
+    width: 10%;
+    height: 10%;
+}
+
+
+/* Dropdown lists */
+
+select {
+    width: 20%;
+    left: 8%;
+}
+
+
+/* ------------------------------------------------ DATA TABLE ------------------------------------------------*/
+
+table {
+    table-layout: fixed;
+    width: 150px;
+    border-collapse: collapse;
+    border: unset;
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+
+td,
+th {
+    padding: 0;
+    border: 2px solid white;
+}
+
+tbody {
+    background: white;
+}
+
+th {
+    background: darkblue;
+    color: white;
+    border: 2px solid rgb(190, 190, 190);
+    padding: 0;
+    width: 170px;
+    overflow: hidden;
+}
+
+td {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr:nth-child(even) {
+    background: rgb(188, 223, 235);
+}
+
+tr:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+
+/* ------------------------------------------------ OTHERS ------------------------------------------------*/
+
+.selectionnee
+/*pour le curseur sur les cellule ndefouille*/
+
+{
+    cursor: pointer;
+}
+
+.selectionnee:hover {
+    background-color: rgb(147, 147, 247);
+}
+
+.selectionnee:active {
+    background-color: rgb(98, 98, 230);
+}
+
+.photoselectionnee
+/*pour la taille des image dans le panier*/
+
+{
+    height: 150px;
+}
