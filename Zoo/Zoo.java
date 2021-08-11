@@ -30,16 +30,3 @@ public class Zoo {
 
     }
 }
-
-/*
- public static void ecrire (Vector leclub)
-            throws IOException {
-        BufferedWriter  buff = new BufferedWriter(new FileWriter("save.txt"));
-        for (Enumeration e = leclub.elements(); e.hasMoreElements();){
-            Animal courant = (Animal)e.nextElement();
-            courant.save(buff);
-        }
-        buff.flush();
-        buff.close();
-    }
- */
