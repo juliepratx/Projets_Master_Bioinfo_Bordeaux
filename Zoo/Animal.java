@@ -107,18 +107,3 @@ public class Animal {
     }
 
 }
-
-/*
-// Pour sauvegarder la saisie de l'utilisateur
-    void save (BufferedWriter buff)
-        throws IOException{
-        buff.write(index);
-        buff.newLine();
-        buff.write(nom);
-        buff.newLine();
-        buff.write(age);
-        buff.newLine();
-        buff.write(poids);
-        buff.newLine();
-    }
- */
